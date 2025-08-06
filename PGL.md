@@ -47,7 +47,7 @@ fold <- list()
 
 ## Acquisition of DEGs from original dataset
 
-###Selection of the list of DEGs
+### Selection of the list of DEGs
 
 ```r
 signi[["Col_noS_mock"]] <- pgl$gene_ID[pgl$Col_noS_mock.sig!="-"]
@@ -57,7 +57,7 @@ signi[["mock_PLL7_Col"]] <- PLL7$gene_ID[PLL7$mock.PLL7.vs.Col.0.II!="-"]
 signi[["pll_Col"]] <- pll$gene_ID[pll$pII_Col.sign!="-"]
 ```
 
-###Selection of the statistical parameters for DEGs
+### Selection of the statistical parameters for DEGs
 
 q-values
 
@@ -360,7 +360,7 @@ mapp3fmt(map = "PLLall.tsv",frame = finframe_PLLall,fmt_out = "PLLall.fmt",mult=
 ```
 
 
-##Creation of the resulting plot in *BASH*
+## Creation of the resulting plot in *BASH*
 
 
 ```sh
