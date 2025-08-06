@@ -360,7 +360,7 @@ mapp3fmt(map = "PLLall.tsv",frame = finframe_PLLall,fmt_out = "PLLall.fmt",mult=
 ```
 
 
-##
+##Creation of the resulting plot in *BASH*
 
 
 ```sh
@@ -374,11 +374,13 @@ filename="mock_PLL7_Col_core" # without .svg,
 filename="mock_PLL7_Col"
 filename="pll_Col"
 
-#filename="PLL_all_notext_core"
+#HERE select appropriate name of input file
+filename="PLL_all_notext_core"
 filename="PLL_all_notext_full"
 filename="PLL7_notext_full"
 filename="PLL10_notext_full"
 
+#New copy of bubble-plot is created
 inkscape --export-filename=${filename}u.svg --export-type="svg" ${filename}.svg
 
 cat ${filename}u.svg | tr -d $'\n' | sed -e "s/>/>\n/g" | sed -e "s/font-size: 12px/font-size: 20px/" -e "s/url(#filter_bg_textFlat)/url(#filter_bg_text)/" -e "s/style=\"fill:url(#radialGradient.*\"//" -e "s/opacity: 0.4/opacity: 1/" > ${filename}u_formated.svg
@@ -394,7 +396,7 @@ sed -i "/data-safe_div_label=\"${name}\"/,/<\/g>/ s/r=\"20\"/r=\"${radfos}\"/g" 
 # CHECK NUMBER OF SPACES IN RESPECTIVE FILES
 sed -i "/data-safe_div_label=\"${name}\"/,/${name}<\/text>/ s/nwbubblecoloredcircle\(.*\)fill=\".*\"         r=/nwbubblecoloredcircle\1fill=\"${colfos}\"         r=/" ${filename}u_formated.svg
 fi
-done < fmt_PLL10_col.fmt  # HERE UPDATE
+done < fmt_PLL10_col.fmt  # HERE UPDATE the name of format table
 
 inkscape ${filename}u_formated.svg
 ```
