@@ -366,7 +366,6 @@ mapp3fmt(map = "PLLall.tsv",frame = finframe_PLLall,fmt_out = "PLLall.fmt",mult=
 ```sh
 cd /media/Home/home/standa/Plocha/Mates/Monika/PGL
 
-  # File 'Anthers_005-STRING-100' was manually edited to move distant nodes inside main frame >> Anthers_005-STRING-100u
 filename="Col_noS_mock" # without .svg, 
 filename="PLL10_noS_mock" # without .svg,
 filename="mock_PLL10_Col_core" # without .svg,
